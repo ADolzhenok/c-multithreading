@@ -20,5 +20,18 @@ All threads run at the same time using a `CountDownLatch` barrier.
 
 An interface and 3 implementations demonstrate deadlock and 2 solutions of it:
 * WrongLockableProcessor - creates a `deadlock` by acquiring resource monitors
-* OrderedLockableResourceProcessor - solution 1: using a `Resourse Ordering` strategy.
+* OrderedLockableResourceProcessor - solution 1: using a `Resourсe Ordering` strategy.
 * TryLockLockableResourceProcessor - solution 2: using `ReentrantLock.tryLock()` with backoff
+
+### Module 3 - Asynchronous & Virtual Threads
+**Story Pipeline**
+
+An asynchronous story processing pipeline built with `CompletableFuture`:
+* Compares the execution speed of platform threads and virtual threads under combined I/O and CPU workloads.
+* Demonstrates pool isolation using a `FixedThreadPool` and the `ForkJoinPool.commonPool()`
+
+The pipeline runs 4 sequential steps for each task:
+
+`Fetch Draft (I/O)` -> `Edit Text (CPU)` -> `Finalize Story (I/O)` -> `Save to Storage (I/O)`
+
+StoryStorage - thread-safe storage backed by `ConcurrentHashMap`.
