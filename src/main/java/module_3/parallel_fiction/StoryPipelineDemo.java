@@ -1,6 +1,6 @@
 package module_3.parallel_fiction;
 
-import module_3.utils.Logger;
+import utils.Logger;
 import module_3.utils.MeasurementUtils;
 
 import java.util.ArrayList;
