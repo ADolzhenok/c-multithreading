@@ -1,6 +1,6 @@
 package module_3.parallel_fiction;
 
-import module_3.utils.ThreadSleepUtil;
+import utils.ThreadSleepUtil;
 
 import java.util.Map;
 import java.util.Optional;
