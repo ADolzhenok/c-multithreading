@@ -1,7 +1,7 @@
 package module_3.parallel_fiction;
 
 import module_3.utils.BusyCpuUtil;
-import module_3.utils.ThreadSleepUtil;
+import utils.ThreadSleepUtil;
 
 import java.util.concurrent.ThreadLocalRandom;
 
