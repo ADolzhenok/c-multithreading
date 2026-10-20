@@ -1,4 +1,4 @@
-package module_3.utils;
+package utils;
 
 import java.security.SecureRandom;
 
@@ -32,4 +32,14 @@ public final class ThreadSleepUtil {
         }
     }
 
+    public static void safeSleepWithRandomMillis(int lowerBound, int upperBound){
+        try{
+            Thread.sleep(RANDOM.nextInt(lowerBound, upperBound));
+        }
+        catch (InterruptedException ex){
+            Thread.currentThread().interrupt();
+        }
+    }
+
 }
+
