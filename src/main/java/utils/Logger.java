@@ -1,13 +1,9 @@
-package module_3.utils;
-
-import java.util.Locale;
+package utils;
 
 public final class Logger {
-    private static volatile boolean logEnabled = true;
     private Logger() {}
 
     public static void log(String fmt, Object... args){
-        if (!logEnabled) return;
 
         String message = (args == null || args.length == 0) ?
                 fmt :
@@ -31,3 +27,4 @@ public final class Logger {
         logWithLevel("ERROR", fmt, args);
     }
 }
+
